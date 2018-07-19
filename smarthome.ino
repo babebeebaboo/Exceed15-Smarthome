@@ -99,7 +99,7 @@ void loop() {
     myservo.write(0);
   if (millis() - time_open_door > 5000)
     myservo.write(0);
-  delay(200);
+  //delay(200);
 
   //ldr
   ldr_value = analogRead(ldr); //reads the LDR values
@@ -111,13 +111,14 @@ void loop() {
 
 
   //switch buzzer
-  while (digitalRead(button_switch) == LOW) {
+  if (digitalRead(button_switch) == LOW) {
     analogWrite(buzzer, HIGH);
     Serial.println("Switch Pressed");
   }
-  analogWrite(buzzer, LOW);
-  Serial.println("Switch NOT Pressed");
-  
+  else {
+    analogWrite(buzzer, LOW);
+    Serial.println("Switch NOT Pressed");
+  }
   //DHT
   // Reading temperature or humidity takes about 250 milliseconds!
   // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
