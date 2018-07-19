@@ -15,7 +15,7 @@
    led 5
    ultrasonic 7 (trigger),6 (echo)
    servo 9 yellow , gnd brown, vcc red
-   DHT11 12
+   DHT11 12 https://www.arduitronics.com/article/13/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99-dht11-humitdity-and-temperature-sensor-%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%94-arduino
 */
 #define button_switch 2
 #define buzzer 11
