@@ -89,7 +89,6 @@ void loop() {
   Serial.print(cm);
   Serial.println("cm");
 
-
   //servo
   if (cm - floor_length < -2)
   {
@@ -112,17 +111,13 @@ void loop() {
 
 
   //switch buzzer
-  if (digitalRead(button_switch) == LOW) //pressed
-  {
+  while (digitalRead(button_switch) == LOW) {
     analogWrite(buzzer, HIGH);
     Serial.println("Switch Pressed");
   }
-  else {
-    analogWrite(buzzer, LOW);
-    Serial.println("Switch NOT Pressed");
-  }
-
-
+  analogWrite(buzzer, LOW);
+  Serial.println("Switch NOT Pressed");
+  
   //DHT
   // Reading temperature or humidity takes about 250 milliseconds!
   // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
