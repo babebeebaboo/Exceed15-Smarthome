@@ -74,6 +74,7 @@ void setup() {
 }
 
 void loop() {
+  analogWrite(buzzer, HIGH);
   //ultrasonic
   pinMode(ping_pin, OUTPUT);
   digitalWrite(ping_pin, LOW);
